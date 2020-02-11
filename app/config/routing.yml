@@ -1,0 +1,123 @@
+gestionevent:
+    resource: "@gestioneventBundle/Resources/config/routing.yml"
+    prefix:   /
+
+front:
+    resource: "@FrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+event:
+    resource: "@EventBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+client:
+    path:      /client
+    defaults:  { _controller: EventBundle:Default:client }
+blog:
+    path:      /blog
+    defaults:  { _controller: EventBundle:Default:blog }
+produits:
+    path:      /produits
+    defaults:  { _controller: EventBundle:Default:produits }
+commandes:
+    path:      /commandes
+    defaults:  { _controller: EventBundle:Default:commandes }
+livraisons:
+    path:      /livraisons
+    defaults:  { _controller: EventBundle:Default:livraisons }
+livreurs:
+    path:      /livreurs
+    defaults:  { _controller: EventBundle:default:livreurs }
+evenement:
+    path:      /evenement
+    defaults:  { _controller: EventBundle:evenement:afficherevent }
+supprimereventcours:
+    path:      /supp/{id}
+    defaults:  { _controller: EventBundle:evenement:supprimereventencours }
+
+supprimerevent:
+    path:      /sup/{nom}
+    defaults:  { _controller: EventBundle:evenement:supprimerevent }
+updateevent:
+    path:     /update/{id}
+    defaults: { _controller: EventBundle:evenement:modifier}
+updateguide:
+    path:     /updateguide/{id}
+    defaults: { _controller: EventBundle:guide:modifierguide}
+updateparticipants:
+    path:     /updateparticipants/{id}
+    defaults: { _controller: EventBundle:participant:modifierparticipant}
+
+guides:
+    path:      /guides
+    defaults:  { _controller: EventBundle:guide:afficherguide }
+participants:
+    path:      /participants
+    defaults:  { _controller: EventBundle:participant:afficherparticipant }
+confirmer:
+    path:      /confirmer/{id}
+    defaults:  { _controller: EventBundle:evenement:confirmer }
+supprimerpart:
+    path:      /sp/{id}
+    defaults:  { _controller: EventBundle:participant:supprimerparticipant }
+supprimerguide:
+    path:      /spguide/{id}
+    defaults:  { _controller: EventBundle:guide:supprimerguide }
+accueil:
+    path:      /accueil
+    defaults:  { _controller: FrontBundle:Default:accueil }
+propos:
+    path:      /propos
+    defaults:  { _controller: FrontBundle:Default:propos }
+evenements:
+    path:      /evenements
+    defaults:  { _controller: FrontBundle:event:affichereventfront }
+detailevent:
+    path:      /detail/{id}
+    defaults:  { _controller: FrontBundle:event:Details }
+
+ajout:
+    path:      /ajout
+    defaults:  { _controller: FrontBundle:event:ajoutereventencours }
+produit:
+    path:      /produit
+    defaults:  { _controller: FrontBundle:Default:produit }
+wishlist:
+    path:      /wishlist
+    defaults:  { _controller: FrontBundle:Default:wishlist }
+promotion:
+    path:      /promotion
+    defaults:  { _controller: FrontBundle:Default:promotion }
+Panier:
+    path:      /Panier
+    defaults:  { _controller: FrontBundle:Default:Panier }
+Checkout:
+    path:      /Checkout
+    defaults:  { _controller: FrontBundle:Default:Checkout }
+blogs:
+    path:      /blogs
+    defaults:  { _controller: FrontBundle:Default:blogs }
+documentation:
+    path:      /documentation
+    defaults:  { _controller: FrontBundle:Default:documentation }
+contact:
+    path:      /contact
+    defaults:  { _controller: FrontBundle:Default:contact }
+ppanier:
+    path:      /panier
+    defaults:  { _controller: FrontBundle:Default:ppanier }
+ajoutparticipant:
+    path:      /ajout/{idevent}
+    defaults:  { _controller: FrontBundle:participant:ajouterParticipant }
+
+rechercheEvenement:
+    path:      /rechercheEvenement
+    defaults:  { _controller: EventBundle:evenement:rechercheEvenement }
+
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+

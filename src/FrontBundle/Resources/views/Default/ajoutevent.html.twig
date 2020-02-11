@@ -1,0 +1,50 @@
+{% extends 'front.html.twig' %}
+{% block body  %}
+  <center>
+    <table class="table table-striped">
+{{form_start(form)  }}
+      <tr>
+      <td>{{ form_label(form.nomEvent)  }}</td>
+      <td>{{ form_widget(form.nomEvent)  }}</td>
+      </tr>
+      <tr>
+      <td>{{ form_label(form.adresse)  }}</td>
+      <td>{{ form_widget(form.adresse)  }}</td>
+      </tr>
+      <tr>
+      <td>{{ form_label(form.type)  }}</td>
+      <td>{{ form_widget(form.type)  }}</td>
+      </tr>
+      <tr>
+      <td>{{ form_label(form.prix)  }}</td>
+      <td>{{ form_widget(form.prix)  }}</td>
+      </tr>
+      <tr>
+        <td>{{ form_label(form.nbPlaces)  }}</td>
+        <td>{{ form_widget(form.nbPlaces)  }}</td>
+      </tr>
+      <tr>
+        <td>{{ form_label(form.description)  }}</td>
+        <td>{{ form_widget(form.description)  }}</td>
+      </tr>
+      <tr>
+        <td>{{ form_label(form.dateDebut)  }}</td>
+        <td>{{ form_widget(form.dateDebut)  }}</td>
+      </tr>
+
+      <tr>
+        <td>{{ form_label(form.image)  }}</td>
+        <td>{{ form_widget(form.image)  }}</td>
+      </tr>
+      <tr>
+        <td>{{ form_label(form.dateFin)  }}</td>
+        <td>{{ form_widget(form.dateFin)  }}</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+      <input type="submit" value="ajouter event" class="btn btn-primary" /></td>
+      </tr>
+  {{ form_end(form) }}
+  </table>
+  </center>
+{% endblock   %}

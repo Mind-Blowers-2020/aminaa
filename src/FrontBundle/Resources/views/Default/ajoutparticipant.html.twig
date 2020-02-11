@@ -1,0 +1,29 @@
+{% extends 'front.html.twig' %}
+
+{% block body  %}
+    <center>
+    <table class="table table-striped">
+    {{form_start(form)  }}
+    <tr>
+        <td>{{ form_label(form.confirmation)  }}</td>
+        <td>{{ form_widget(form.confirmation)  }}</td>
+    </tr>
+
+        <tr>
+            <td>{{ form_label(form.nom)  }}</td>
+            <td>{{ form_widget(form.nom)  }}</td>
+        </tr>
+        <tr>
+            <td>{{ form_label(form.prenom)  }}</td>
+            <td>{{ form_widget(form.prenom)  }}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="ajouter participant" class="btn btn-primary" /></td>
+        </tr>
+
+    {{ form_end(form) }}
+
+    </table>
+    </center>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>modification </h1>
+    {{ form_start(form) }}
+    <table>
+        <tr>
+            <td>nom</td>
+            <td>{{ form_widget(form.nomEvent) }}</td>
+
+        </tr>
+        <tr>
+            <td>adresse</td>
+            <td>{{ form_widget(form.adresse) }}</td>
+
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>{{ form_widget(form.type) }}</td>
+
+        </tr>
+        <tr>
+            <td>prix</td>
+            <td>{{ form_widget(form.prix) }}</td>
+
+        </tr>
+
+
+        <tr>
+            <td>nbre places</td>
+            <td>{{ form_widget(form.nbPlaces) }}</td>
+
+        </tr>
+
+        <tr>
+            <td>description</td>
+            <td>{{ form_widget(form.description) }}</td>
+
+        </tr>
+
+        <tr>
+            <td>date debut</td>
+            <td>{{ form_widget(form.dateDebut) }}</td>
+
+        </tr>
+        <tr>
+            <td>image</td>
+            <td>{{ form_widget(form.image) }}</td>
+
+        </tr>
+        <tr>
+            <td>datefin</td>
+            <td>{{ form_widget(form.dateFin) }}</td>
+
+        </tr>
+
+
+    </table>
+    {{ form_end(form) }}
+{% endblock %}

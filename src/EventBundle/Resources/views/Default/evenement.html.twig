@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h2>les evenements</h2>
+    <br>
+    <input type="text" class="recherche">
+
+
+    <table border="1" class="table table-dark">
+
+        <hr>
+            <td> id</td>
+            <td> nomEvent</td>
+            <td> adresse</td>
+            <td> type </td>
+            <td> prix </td>
+            <td> nbPlaces </td>
+            <td> description </td>
+            <td> dateDebut </td>
+            <td> image </td>
+            <td> dateFin </td>
+
+
+        </hr>
+        <tbody id="evt">
+        {% for vv in evenement %}
+
+                    <tr>
+                        <td>{{ vv.id }}</td>
+                        <td>{{ vv.nomEvent }}</td>
+                        <td>{{ vv.adresse }}</td>
+                        <td>{{ vv.type }}</td>
+                        <td>{{ vv.prix }}</td>
+                        <td>{{ vv.nbPlaces }}</td>
+                        <td>{{ vv.description }}</td>
+
+                        <td>{{ vv.dateDebut|date }}</td>
+                        <td>{{ vv.image }}</td>
+                        <td>{{ vv.dateFin|date}}</td>
+
+
+
+
+
+
+                    </tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+<br><br><br>
+    <h2>les evenement non confirmés</h2>
+    <table border="1" class="table table-dark">
+        <tr>
+            <td> nomEvent</td>
+            <td> adresse</td>
+            <td> type </td>
+            <td> prix </td>
+            <td> nbPlaces </td>
+            <td> description </td>
+            <td> dateDebut </td>
+            <td> image </td>
+            <td> dateFin </td>
+
+
+        </tr>
+        {% for ee in evenementcours %}
+
+            <tr>
+
+                <td>{{ ee.nomEvent }}</td>
+                <td>{{ ee.adresse }}</td>
+                <td>{{ ee.type }}</td>
+                <td>{{ ee.prix }}</td>
+                <td>{{ ee.nbPlaces }}</td>
+                <td>{{ ee.description }}</td>
+
+                <td>{{ ee.dateDebut|date }}</td>
+                <td><img src="{{ asset('photos/') }}{{ ee.image }}"></td>
+                <td>{{ ee.dateFin|date}}</td>
+                <td><a  class="btn btn-primary btn-sm"  href="{{ path('confirmer' , {'id':ee.id}) }}">confirmer</a></td>
+                <td><a class="btn btn-danger btn btn-primary btn-sm " href="{{ path('supprimereventcours' , {'id':ee.id}) }}">Supprimer</a></td>
+                <td><a  class="btn btn-success btn btn-primary btn-sm" href="{{ path('updateevent' , {'id':ee.id}) }}">modifier</a></td>
+
+
+            </tr>
+
+        {% endfor %}
+    </table>
+
+{% endblock %}
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+
+
+            $('.recherche').keypress(function () {
+                $.ajax({
+                    url:   "{{ path('rechercheEvenement') }}",
+                    type:'GET',
+                    dataType: 'JSON',
+                    data:{'evenm':$(this).val() },
+                    async: true,
+
+                    success:function (data) {
+                       $('#evt').html("");
+                       for(var i=0;i<data.length;i++){
+                           $('#evt').append("<tr>  <td>"+data[i].id+" </td>  <td>"+data[i].nomEvent+" </td>  <td>"+data[i].adresse+" </td>  <td>"+data[i].type+" </td>  <td>"+data[i].prix+" </td>  <td>"+data[i].nbPlaces+" </td>  <td>"+data[i].description+" </td>  <td>"+data[i].dateDebut.date+" </td>  <td>"+data[i].image+" </td>  <td>"+data[i].dateFin.date+" </td> </tr>")
+                       }
+
+                    },
+                    error: function (xhr, textStatus,errorThrown) {
+                        alert("error");
+                    }
+                })
+            });
+        });
+    </script>
+
+{% endblock %}

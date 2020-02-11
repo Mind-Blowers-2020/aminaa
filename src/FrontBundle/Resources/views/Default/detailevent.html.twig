@@ -1,0 +1,96 @@
+{% extends 'Front.html.twig' %}
+
+{% block body %}
+    <section id="page-content" class="page-wrapper">
+        <div class="banner-area section-padding">
+            <div class="container">
+                <section id="page-content" class="page-wrapper">
+                    <!-- Start Shop Full Grid View -->
+                    <div class="product-details-area section-padding">
+                        <div class="container">
+                            <div class="row">
+
+                                                <div class="container">
+                                                    <div class="row">
+                                                    <div class="col-sm-8" style="width: 800px !important">
+                                                <div class="tab-pane b-img active" id="view1">
+
+                                                    <a class="venobox" href="#"><img style="max-width: 800px; max-height: 400px;" src="{{ asset('photos/' ~ image) }}"></a>
+
+                                                </div>
+                                                    </div>
+                                                        <div class="col-sm-2">
+                                               <div >
+                                                   <strong>
+                                                   {{ nomEvent }}
+                                                   <br>
+                                                   {{ description }}
+                                                   <br>
+                                                   {{ prix }}
+                                                   <br>
+                                                   {{ adresse }}
+                                                   </strong>
+                                               </div>
+
+                                                <a class="btn btn-dark" href="{{ path('ajoutparticipant', {'idevent':id}) }}">s'inscrire</a>
+                                                        </div></div></div>
+
+                                            {#
+                                <div class="col-sm-7">
+                                    <div class="product-details-content">
+                                        <div class="product-content text-uppercase">
+                                            <h5>  </h5>
+                                            <div class="rating-icon pb-30 mt-10">
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star"></i>
+                                                <i class="zmdi zmdi-star-half"></i>
+                                                <i class="zmdi zmdi-star-half"></i>
+                                            </div>
+
+                                        </div>
+
+
+                                        <br>
+                                        <div class="product-action-shop text-center mb-40">
+                                            <a href="#" title="Quick view" data-toggle="modal" data-target="#productModal">
+                                                <i class="zmdi zmdi-eye"></i>
+                                            </a>
+                                            <a title="Add to cart" href="#">
+                                                <i class="zmdi zmdi-shopping-cart"></i>
+                                            </a>
+                                            <a title="Add to Wishlist" href="#">
+                                                <i class="zmdi zmdi-favorite"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>#}
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="product-details-content pt-90">
+                                        <div class="p-details-tab">
+                                            <ul class="nav nav-tabs text-uppercase mb-20" role="tablist">
+
+
+                                            </ul>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="tab-content review">
+                                            <div role="tabpanel" class="tab-pane active" id="description">
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'front.html.twig' %}
+{% block body %}
+<center>
+    <td><a class="btn btn-primary" href="{{ path('ajout') }}">ajouterevent</a></td>
+    <h2>les evenements</h2>
+
+        <div class="container">
+            <div class="row">
+                {% for vv in evenement %}
+                {% if vv.dateFin > date() %}
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <div class="product">
+                        <a href="#" class="img-prod"><img class="img-fluid" src="{{ asset('photos/') }}{{ vv.image }}" alt="Colorlib Template">
+
+                            <div class="overlay"></div>
+                        </a>
+                        <div class="text py-3 pb-4 px-3 text-center">
+                            <h3><a href="#">{{vv.nomEvent}}</a></h3>
+                            <div class="d-flex">
+                                <div class="pricing">
+                                    <p class="price"><span class="mr-2 price-dc"></span><span class="price-sale">{{vv.prix}}</span></p>
+                                </div>
+                            </div>
+                            <div class="bottom-area d-flex px-3">
+                                <div class="m-auto d-flex">
+                                    <a href="{{ path('detailevent' ,{ 'id':vv.id }) }}" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                        <span><i class="ion-ios-menu"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+
+</center>
+{% endblock %}

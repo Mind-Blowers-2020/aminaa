@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h2>les guides</h2>
+    <table border="1" class="table table-dark">
+        <tr>
+            <td> nom</td>
+            <td> prenom</td>
+            <td> mail </td>
+            <td> tel </td>
+            <td> event Type </td>
+
+
+
+        </tr>
+        {% for vv in guide %}
+
+            <tr>
+
+                <td>{{ vv.nom }}</td>
+                <td>{{ vv.prenom }}</td>
+                <td>{{ vv.mail }}</td>
+                <td>{{ vv.tel }}</td>
+                <td>{{ vv.eventType }}</td>
+                <td><a class="btn btn-danger btn btn-primary btn-sm " href="{{ path('supprimerguide' , {'id':vv.id}) }}">Supprimer</a></td>
+
+
+                <td><a  class="btn btn-success btn btn-primary btn-sm" href="{{ path('updateguide' , {'id':vv.id}) }}">modifier</a></td>
+
+
+
+
+            </tr>
+
+        {% endfor %}
+    </table>
+{% endblock %}

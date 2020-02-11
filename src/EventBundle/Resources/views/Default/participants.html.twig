@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h2>les participants</h2>
+    <table border="1" class="table table-dark">
+        <tr>
+            <td> id</td>
+            <td>confirmation</td>
+            <td> evenement</td>
+            <td> date </td>
+
+
+
+
+        </tr>
+        {% for vv in participant %}
+
+            <tr>
+
+                <td>{{ vv.id }}</td>
+                <td>{{ vv.confirmation }}</td>
+                <td>{{ vv.evenement.nomEvent }}</td>
+                <td>{{ vv.dateInscrit|date }}</td>
+
+                <td><a class="btn btn-danger btn btn-primary btn-sm " href="{{ path('supprimerpart' , {'id':vv.id}) }}">Supprimer</a></td>
+
+                <td><a  class="btn btn-success btn btn-primary btn-sm" href="{{ path('updateparticipants' , {'id':vv.id}) }}">modifier</a></td>
+
+
+
+
+
+            </tr>
+
+        {% endfor %}
+    </table>
+{% endblock %}
