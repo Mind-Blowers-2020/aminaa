@@ -5,11 +5,11 @@
 {{form_start(form)  }}
       <tr>
       <td>{{ form_label(form.nomEvent)  }}</td>
-      <td>{{ form_widget(form.nomEvent)  }}</td>
+      <td>{{ form_widget(form.nomEvent)  }} <span  id="span2">le nom ne contient pas des chiffres</span></td>
       </tr>
       <tr>
       <td>{{ form_label(form.adresse)  }}</td>
-      <td>{{ form_widget(form.adresse)  }}</td>
+      <td>{{ form_widget(form.adresse)  }}<span  id="span3">l'adresse ne contient pas des chiffres</span></td>
       </tr>
       <tr>
       <td>{{ form_label(form.type)  }}</td>
@@ -17,20 +17,20 @@
       </tr>
       <tr>
       <td>{{ form_label(form.prix)  }}</td>
-      <td>{{ form_widget(form.prix)  }}</td>
+      <td>{{ form_widget(form.prix)  }}  <span  id="span">le prix ne contient pas des lettres</span></td>
       </tr>
       <tr>
         <td>{{ form_label(form.nbPlaces)  }}</td>
-        <td>{{ form_widget(form.nbPlaces)  }}</td>
+        <td>{{ form_widget(form.nbPlaces)  }} <span  id="span4">le prix ne contient pas des lettres</span></td>
       </tr>
       <tr>
         <td>{{ form_label(form.description)  }}</td>
-        <td>{{ form_widget(form.description)  }}</td>
+        <td>{{ form_widget(form.description)  }} </td>
       </tr>
       <tr>
         <td>{{ form_label(form.dateDebut)  }}</td>
         <td>{{ form_widget(form.dateDebut)  }}</td>
-      </tr>
+      </tr>au
 
       <tr>
         <td>{{ form_label(form.image)  }}</td>
@@ -42,9 +42,126 @@
       </tr>
       <tr>
         <td colspan="2">
-      <input type="submit" value="ajouter event" class="btn btn-primary" /></td>
+      <input type="submit" id="ajouter" value="ajouter event" class="btn btn-primary" /></td>
       </tr>
   {{ form_end(form) }}
   </table>
   </center>
+{% endblock   %}
+{% block script %}
+
+  <script>
+    $(document).ready(function () {
+$("#span").hide();
+$("#span2").hide();
+      $("#span3").hide();
+      $("#span4").hide();
+
+    $('#form_prix').keyup(function () {
+
+      var x = $('#form_prix').val();
+      var test2=/^[A-Za-z]+$/;
+      if (test2.test(x)) {
+        $('#span').show();
+
+        $('#ajouter').prop('disabled', true);
+
+      } else {
+        $('#span').hide();
+        $('#ajouter').prop('disabled', false);
+      }
+
+
+
+
+
+
+    });
+
+
+
+
+      $('#form_nomEvent').keyup(function () {
+
+        var nom = $('#form_nomEvent').val();
+        var test=/^[A-Za-z]+$/;
+        if (test.test(nom)) {
+
+
+          $('#span2').hide();
+          $('#ajouter').prop('disabled', false);
+
+        } else {
+          $('#span2').show();
+
+
+          $('#ajouter').prop('disabled', true);
+        }
+
+
+
+
+
+
+
+
+      });
+
+
+
+      $('#form_adresse').keyup(function () {
+
+        var nom = $('#form_adresse').val();
+        var test=/^[A-Za-z]+$/;
+        if (test.test(nom)) {
+
+
+          $('#span3').hide();
+          $('#ajouter').prop('disabled', false);
+
+        } else {
+          $('#span3').show();
+
+
+          $('#ajouter').prop('disabled', true);
+        }
+
+
+
+
+
+
+
+
+      });
+
+
+      $('#form_nbPlaces').keyup(function () {
+
+        var nom = $('#form_nbPlaces').val();
+        var test=/^[A-Za-z]+$/;
+        if (test.test(nom)) {
+
+
+          $('#span4').hide();
+          $('#ajouter').prop('disabled', false);
+
+        } else {
+          $('#span4').show();
+
+
+          $('#ajouter').prop('disabled', true);
+        }
+
+
+
+
+
+
+
+
+      });
+
+    })
+  </script>
 {% endblock   %}

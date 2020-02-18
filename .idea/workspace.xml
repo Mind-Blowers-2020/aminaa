@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7554664f-0e39-43df-9d47-9af204d17acc" name="Default Changelist" comment="" />
+    <list default="true" id="7554664f-0e39-43df-9d47-9af204d17acc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/photos/84f9ca6b4a686ad86e3bfe8f7de4f5b1.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/backt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backt.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/front.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/front.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventBundle/Controller/evenementController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventBundle/Controller/evenementController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventBundle/Resources/views/Default/chartEvent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Default/chartEvent.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventBundle/Resources/views/Default/evenement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Default/evenement.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventBundle/Resources/views/Default/participants.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventBundle/Resources/views/Default/participants.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FrontBundle/Controller/eventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/FrontBundle/Controller/eventController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FrontBundle/Resources/views/Default/ajoutevent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/FrontBundle/Resources/views/Default/ajoutevent.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FrontBundle/Resources/views/Default/detailevent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/FrontBundle/Resources/views/Default/detailevent.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FrontBundle/Resources/views/Default/evenements.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/FrontBundle/Resources/views/Default/evenements.html.twig" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +36,10 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="backt" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -59,10 +83,22 @@
       <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/cmen/google-charts-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XV4dbN6ujy82rzPjvJKheWGvRn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/web/cssBack/js" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -89,11 +125,12 @@
       <command value="s generate:bundle" />
       <command value="s doctrine:generate:entity" />
       <command value="php composer.phar clear-cache" />
-      <command value="c dump-autoload" />
       <command value="s doctrine:schema:update --force" />
       <command value="php composer clear-cache" />
       <command value="s cache:clear" />
       <command value="s server:run" />
+      <command value="composer require &quot;swiftmailer/swiftmailer:^6.0&quot;" />
+      <command value="c dump-autoload" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -128,11 +165,30 @@
       <workItem from="1581265303458" duration="2640000" />
       <workItem from="1581270854125" duration="1222000" />
       <workItem from="1581273205893" duration="5792000" />
-      <workItem from="1581345171835" duration="51423000" />
+      <workItem from="1581345171835" duration="66091000" />
+      <workItem from="1581593529224" duration="6088000" />
+      <workItem from="1581778346016" duration="21349000" />
+      <workItem from="1581969323473" duration="18871000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

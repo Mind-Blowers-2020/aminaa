@@ -1,5 +1,8 @@
 {% extends 'front.html.twig' %}
 {% block body %}
+    <style>
+        #nav_pag{position: relative; left: 600px;bottom: 5px}
+    </style>
 <center>
     <td><a class="btn btn-primary" href="{{ path('ajout') }}">ajouterevent</a></td>
     <h2>les evenements</h2>
@@ -7,7 +10,7 @@
         <div class="container">
             <div class="row">
                 {% for vv in evenement %}
-                {% if vv.dateFin > date() %}
+
                 <div class="col-md-6 col-lg-3 ftco-animate">
                     <div class="product">
                         <a href="#" class="img-prod"><img class="img-fluid" src="{{ asset('photos/') }}{{ vv.image }}" alt="Colorlib Template">
@@ -31,10 +34,18 @@
                         </div>
                     </div>
                 </div>
-                {% endif %}
+
                 {% endfor %}
             </div>
         </div>
 
+<div id="nav_pag">
+    <nav  aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item">{{ knp_pagination_render(evenement) }}</li>
+
+        </ul>
+    </nav>
+</div>
 </center>
 {% endblock %}

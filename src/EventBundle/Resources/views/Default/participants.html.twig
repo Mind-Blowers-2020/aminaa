@@ -1,9 +1,14 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <h2>les participants</h2>
+    <br>
+    <br>
+    <a class="btn btn-info btn-icon-text" href="{{ path('chart_Formation') }}"><i class="fa fa-angle-right"></i>stat</a>
     <table border="1" class="table table-dark">
         <tr>
             <td> id</td>
+            <td> nom</td>
+            <td> prenom</td>
             <td>confirmation</td>
             <td> evenement</td>
             <td> date </td>
@@ -17,6 +22,8 @@
             <tr>
 
                 <td>{{ vv.id }}</td>
+                <td>{{ vv.nom }}</td>
+                <td>{{ vv.prenom }}</td>
                 <td>{{ vv.confirmation }}</td>
                 <td>{{ vv.evenement.nomEvent }}</td>
                 <td>{{ vv.dateInscrit|date }}</td>

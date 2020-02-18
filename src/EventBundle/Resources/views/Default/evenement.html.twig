@@ -3,7 +3,12 @@
     <h2>les evenements</h2>
     <br>
     <input type="text" class="recherche">
+    <br>
+    <div class="col-xs-12">
+        <br>
+        <button class="btn btn-info btn-icon-text" onclick="window.print();"><i class="mdi mdi-printer btn-icon-append"></i>      IMPRIMER</button>
 
+    </div>
 
     <table border="1" class="table table-dark">
 
@@ -86,6 +91,7 @@
 
         {% endfor %}
     </table>
+
 
 {% endblock %}
 {% block javascripts %}

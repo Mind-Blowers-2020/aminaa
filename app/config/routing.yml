@@ -72,9 +72,7 @@ accueil:
 propos:
     path:      /propos
     defaults:  { _controller: FrontBundle:Default:propos }
-evenements:
-    path:      /evenements
-    defaults:  { _controller: FrontBundle:event:affichereventfront }
+
 detailevent:
     path:      /detail/{id}
     defaults:  { _controller: FrontBundle:event:Details }
@@ -112,11 +110,15 @@ ppanier:
 ajoutparticipant:
     path:      /ajout/{idevent}
     defaults:  { _controller: FrontBundle:participant:ajouterParticipant }
-
+evenements:
+    path:      /aff
+    defaults:  { _controller: FrontBundle:event:affichereventfront }
 rechercheEvenement:
     path:      /rechercheEvenement
     defaults:  { _controller: EventBundle:evenement:rechercheEvenement }
-
+chart_Formation:
+    path:     /ChartFormation
+    defaults: { _controller: EventBundle:evenement:stat }
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
